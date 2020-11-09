@@ -1,6 +1,6 @@
 import './App.css';
 import logo from './assets/logo.png';
-import Greenv from './assets/v2.webm';
+import Greenv from './assets/v2.mp4';
 import { Video, ImgContainer, Headline, BlackOverlay, HeadlineContainer, Logo, CTAButton, Content, Founders, Story, List, Item } from './app.styles';
 import SingleTeamMember from './components/single-team-member/single-team-member.component';
 import Sri from './assets/sri.jpg';
@@ -19,7 +19,9 @@ function App() {
     <div className='App'>
       <ImgContainer>
         <BlackOverlay></BlackOverlay>
-        <Video src={Greenv} alt='Green Yoga Team' autoPlay loop muted playsInline></Video>
+        <Video alt='Green Yoga Team' loop autoPlay muted playsInline>
+          <source src={Greenv} type='video/mp4'></source>
+        </Video>
         <HeadlineContainer>
           <Headline>We have been working on something big behind the scenes </Headline>
 
