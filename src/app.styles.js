@@ -4,9 +4,10 @@ import { device } from './utils/responsive';
 export const ImgContainer = styled.div`
   position: relative;
   overflow: hidden;
+  width: 100vw;
 `;
 
-export const Image = styled.img`
+export const Video = styled.video`
   width: 100%;
   object-fit: cover;
   object-position: center center;
@@ -27,7 +28,8 @@ export const HeadlineContainer = styled.div`
 
   position: absolute;
   color: white;
-  top: 60%;
+  top: 50%;
+
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;

@@ -1,24 +1,30 @@
 import './App.css';
-import welcome from './assets/welcome.jpeg';
 import logo from './assets/logo.png';
-
-import { Image, ImgContainer, Headline, BlackOverlay, HeadlineContainer, Logo, CTAButton, Content, Founders, Story, List, Item } from './app.styles';
+import Greenv from './assets/v2.webm';
+import { Video, ImgContainer, Headline, BlackOverlay, HeadlineContainer, Logo, CTAButton, Content, Founders, Story, List, Item } from './app.styles';
 import SingleTeamMember from './components/single-team-member/single-team-member.component';
 import Sri from './assets/sri.jpg';
 import Nora from './assets/nora.jpg';
+import TagManager from 'react-gtm-module';
 require('typeface-montserrat');
 require('typeface-lato');
+
+const tagManagerArgs = {
+  gtmId: 'GTM-TZNQSGC',
+};
+
+TagManager.initialize(tagManagerArgs);
 function App() {
   return (
     <div className='App'>
       <ImgContainer>
         <BlackOverlay></BlackOverlay>
-        <Image src={welcome} alt='Green Yoga Team'></Image>
+        <Video src={Greenv} alt='Green Yoga Team' autoPlay loop muted playsInline></Video>
         <HeadlineContainer>
           <Headline>We have been working on something big behind the scenes </Headline>
 
           <Headline>It’s finally time to reveal.</Headline>
-          <CTAButton large inverted>
+          <CTAButton onClick={() => (window.location.href = 'https://greenyoga.co/')} large inverted>
             Check it out{' '}
           </CTAButton>
         </HeadlineContainer>
@@ -44,7 +50,7 @@ function App() {
           <Item>Introducing all of our kind teachers</Item>
           <Item>Showing more of what Green Yoga is all about</Item>
         </List>
-        <CTAButton large inverted>
+        <CTAButton onClick={() => (window.location.href = 'https://greenyoga.co/')} large inverted>
           Check it out
         </CTAButton>
       </Content>
