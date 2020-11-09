@@ -34,6 +34,19 @@ export const HeadlineContainer = styled.div`
   transform: translate(-50%, -50%);
   width: 90%;
 
+  animation: fadeIn ease 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  opacity: 0;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   @media ${device.laptop} {
     width: 75%;
   }
@@ -51,9 +64,10 @@ export const Headline = styled.h1`
   }
   @media ${device.laptop} {
     font-size: 2rem;
+    margin-bottom: 5rem;
   }
   @media ${device.laptopL} {
-    margin: 2rem;
+    margin: 4rem;
     font-size: 2.5rem;
   }
 `;
